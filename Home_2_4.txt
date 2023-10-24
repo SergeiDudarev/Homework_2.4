@@ -1,0 +1,31 @@
+import  java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Fill in TV Channel No.: ");
+        int channel = scanner.nextInt();
+
+        String channels [] = {"CTC", "Eurosport 1", "Eurosport 2", "Discovery", "Animal Planet", "viju TV1000",
+                "Investigation Discovery", "Setanta Sports", "Setnabta Sports 2", "THT"};
+
+
+        while (true) {
+            while (channel < 0 || channel >= 10) {
+                System.out.print("Channel is not available ");
+                channel = new Scanner(System.in).nextInt();
+            }
+            if (channel == 0) {
+                System.out.println("LG. Life's good");
+                break;
+            }
+            System.out.println("You're watching: " + channels[channel]);
+
+            System.out.print("To select another channel fill in TV channel No: ");
+            channel = new Scanner(System.in).nextInt();
+
+
+
+        }
+    }
+}
